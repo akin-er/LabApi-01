@@ -13,8 +13,9 @@ pipeline {
             steps {
                 echo 'Stop If Runnig'
                 sh '''
-                if($(docker container ls -aq))
-                    docker container stop $(docker container ls -aq)
+                if( $(docker container ls -aq) ) ; then
+                        docker container stop $(docker container ls -aq)
+                fi
                 '''
             }
         }
