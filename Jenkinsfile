@@ -9,11 +9,11 @@ pipeline {
             }
         }
 
-
+        
         stage('Docker Run') {
             steps {
                 echo 'Publish'
-                sh 'docker run --rm -p 5000:5000 -e ASPNETCORE_URLS=http://+:5000 labapi-01'
+                sh 'docker run -d --rm -p 5000:5000 -e ASPNETCORE_URLS=http://+:5000 labapi-01'
             }
         }
 
