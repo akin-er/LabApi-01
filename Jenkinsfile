@@ -2,10 +2,10 @@ pipeline {
     agent { label 'ec2' }
 
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
-                sh 'uname -a'
+                echo 'Building'
+                sh 'docker build --rm -t labapi-01:latest .'
             }
         }
     }
