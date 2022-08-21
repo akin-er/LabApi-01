@@ -9,7 +9,13 @@ pipeline {
             }
         }
 
-        
+        stage('Docker Stop If Runnig') {
+            steps {
+                echo 'Publish'
+                sh 'docker container stop $(docker container ls -aq)'
+            }
+        }
+
         stage('Docker Run') {
             steps {
                 echo 'Publish'
