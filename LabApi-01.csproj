@@ -7,12 +7,6 @@
     <RootNamespace>LabApi_01</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Jenkinsfile" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Jenkinsfile" />
-  </ItemGroup>
+ 
 
 </Project>
