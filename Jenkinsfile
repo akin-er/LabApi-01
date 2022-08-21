@@ -11,8 +11,11 @@ pipeline {
 
         stage('Docker Stop If Runnig') {
             steps {
-                echo 'Publish'
-                sh 'docker container stop $(docker container ls -aq)'
+                echo 'Stop If Runnig'
+                sh '''
+                if($(docker container ls -aq))
+                    docker container stop $(docker container ls -aq)
+                '''
             }
         }
 
