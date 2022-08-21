@@ -4,7 +4,7 @@ Description=Lab Api 01 application
 [Service]
 # systemd will run this executable to start the service
 # if /usr/bin/dotnet doesn't work, use `which dotnet` to find correct dotnet executable path
-ExecStart=/usr/bin/dotnet /home/ec2-user/workspace/demo-pipeline-03/LabApi-01.dll
+ExecStart=/usr/bin/dotnet /home/ec2-user/LabApi-01/bin/Release/net6.0/LabApi-01.dll
 # to query logs using journalctl, set a logical name here
 SyslogIdentifier=LabApi-01
 
