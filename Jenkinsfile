@@ -2,9 +2,24 @@ pipeline {
     agent { label 'ec2' }
 
     stages {
+
+        stage('Dotnet Test') {
+            steps {
+                echo 'Testing'
+                sh 'dotnet test'
+            }
+        }
+
+        stage('Dotnet Build') {
+            steps {
+                echo 'Dotnet Building'
+                sh 'dotnet build -c Release'
+            }
+        }
+
         stage('Docker Build') {
             steps {
-                echo 'Building'
+                echo 'Docker Building'
                 sh 'docker build --rm -t labapi-01:latest .'
             }
         }
