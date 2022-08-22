@@ -6,6 +6,6 @@ var app = builder.Build();
 
 var version = "0000A007"; 
 
-app.MapGet("/", () => $"NSWTA TEST API APP! {version}");
+app.MapGet("/", () => $"NSWTA TEST API APP! {version}-{Guid.NewGuid()}");
 
 app.Run();
