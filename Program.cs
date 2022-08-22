@@ -4,7 +4,7 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-var version = "0000A002"; 
+var version = "0000A003"; 
 
 app.MapGet("/", () => $"NSWTA TEST API APP! {version}");
 
