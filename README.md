@@ -1,3 +1,3 @@
 # LabApi-01
 
-Test dotnet core 6.0 basic web api aws instance deploy docker
+Sample App for dotnet core 6.0 basic web api on aws instance deploy docker with Jenkins
