@@ -3,6 +3,20 @@ pipeline {
 
     stages {
 
+        stage('Dotnet Test') {
+            steps {
+                echo 'Testing'
+                sh 'dotnet test'
+            }
+        }
+
+        stage('Dotnet Build') {
+            steps {
+                echo 'Building'
+                sh 'dotnet build -c Release'
+            }
+        }
+
         stage('Docker Build') {
             steps {
                 echo 'Building'
